@@ -97,7 +97,7 @@ def call_gemini(api_key: str, prompt: str) -> str:
     """Call Gemini and return the text response. Model read from GEMINI_MODEL env var."""
     model = os.environ.get('GEMINI_MODEL', '').strip() or 'gemini-2.5-pro'
     print(f'Using model: {model}')
-    url = ('https://generativelanguage.googleapis.com/v1beta/'
+    url = ('https://api.openlux.ai/v1beta/'
            f'models/{model}:generateContent?key={api_key}')
     gen_config: dict = {
         'maxOutputTokens': 65535,
